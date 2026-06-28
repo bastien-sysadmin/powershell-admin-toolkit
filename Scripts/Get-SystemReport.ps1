@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Génère un rapport système de base.
+    Génère un rapport système de base
 
 .DESCRIPTION
     Ce script récupère plusieurs informations utiles sur un poste Windows :
@@ -8,7 +8,7 @@
     processeur, mémoire RAM et espace disque.
 
 .NOTES
-    Auteur : Bertrand Bastien
+    Auteur : BERTRAND Bastien
     Usage  : Exemple de script d'administration PowerShell
 #>
 
