@@ -1,0 +1,40 @@
+ServiceName,
+wuauserv
+bits
+spooler
+WinRM
+EventLog
+NonExistingServiceExample
+Ivanti Command Service
+Ivanti Inventory Server
+Ivanti Scheduler Service
+Ivanti Usage Service
+Ivanti Agent Portal Service
+Ivanti APNS Service
+Ivanti Alert Service
+Ivanti ASF Proxy Service
+Ivanti Console Redirection Service
+Ivanti Core Sync Service
+Ivanti Management Agent
+Ivanti Management Gateway Service
+Ivanti MDM Management Service
+Ivanti System Manager SNMP Message Relay Service
+Managed Planet Barcode Core
+Managed Planet Core Scan Processor
+Managed Planet Discovery Core
+Managed Planet Rapid Deployment
+Managed Planet Software Manager
+Managed Planet Task Listener
+LANDESK Command Service
+LANDesk Inventory Server
+LANDesk Scheduler Service
+LANDesk Usage Service
+LANDesk(R) Agent Portal Service
+LANDesk(R) Alert Service
+LANDesk(R) ASF Proxy Service
+LANDesk(R) Console Redirection Service
+LANDesk(R) Core Sync Service
+LANDesk(R) Management Agent
+LANDesk(R) Management Gateway Service
+LANDESK(R) MDM Management Service
+LANDesk(R) System Manager SNMP Message Relay Service
