@@ -21,7 +21,13 @@ Ce script remplace une approche basée sur deux scripts séparés en proposant u
 ```text
 IvantiPortTester/
 ├── Test-IvantiPorts.ps1
-└── README.md
+├── README.md
+└── Reports/
+  ├── README.md
+  ├── sample-client-port-report.csv
+  ├── sample-client-port-report.html
+  ├── sample-coreserver-port-report.csv
+  └── sample-coreserver-port-report.html
 ```
 
 ## Utilisation
