@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exemple de rapport de test des ports Ivanti / LANDesk</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 20px; }
+h1 { color: #222; }
+.notice { background: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 10px; border-radius: 8px; margin-bottom: 20px; }
+.summary { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+.card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 12px; min-width: 160px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+table { width: 100%; border-collapse: collapse; background-color: #fff; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #2f6f9f; color: white; }
+tr:nth-child(even) { background-color: #f2f2f2; }
+.open { color: green; font-weight: bold; }
+.closed { color: red; font-weight: bold; }
+.warning { color: #b36b00; font-weight: bold; }
+.error { color: red; font-weight: bold; }
+footer { margin-top: 25px; font-size: 12px; color: #777; }
+</style>
+</head>
+<body>
+<h1>Exemple de rapport de test des ports Ivanti / LANDesk</h1>
+<div class="notice"><strong>Note :</strong> ce rapport est un exemple fictif et anonymisé destiné à un dépôt GitHub. Les cibles, dates et résultats ne correspondent à aucun environnement réel.</div>
+<div class="summary">
+    <div class="card"><strong>Cible</strong><br>pc-client-01.example.local</div>
+    <div class="card"><strong>Profil</strong><br>Client</div>
+    <div class="card"><strong>Protocole</strong><br>All</div>
+    <div class="card"><strong>Total</strong><br>18</div>
+    <div class="card"><strong>Ouverts</strong><br>10</div>
+    <div class="card"><strong>Fermés / filtrés</strong><br>4</div>
+    <div class="card"><strong>UDP sans réponse</strong><br>4</div>
+    <div class="card"><strong>Erreurs</strong><br>0</div>
+</div>
+<table>
+<thead><tr><th>Cible</th><th>Profil</th><th>Protocole</th><th>Port</th><th>Statut</th><th>Détail</th><th>Date du test</th></tr></thead>
+<tbody>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>80</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>443</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>445</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>4343</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>44345</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>5007</td><td class='closed'>Closed or filtered</td><td>Connection timed out</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>9594</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>9595</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>9982</td><td class='closed'>Closed or filtered</td><td>Connection failed or timed out</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>12175</td><td class='open'>Open</td><td>TCP connection established</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>12176</td><td class='closed'>Closed or filtered</td><td>Connection timed out</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>TCP</td><td>33354</td><td class='closed'>Closed or filtered</td><td>Connection failed or timed out</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>UDP</td><td>69</td><td class='warning'>No response</td><td>No UDP response received. The port may be open, filtered, or not responding.</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>UDP</td><td>1759</td><td class='warning'>No response</td><td>No UDP response received. The port may be open, filtered, or not responding.</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>UDP</td><td>4011</td><td class='warning'>No response</td><td>No UDP response received. The port may be open, filtered, or not responding.</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>UDP</td><td>9535</td><td class='open'>Open</td><td>UDP response received</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>UDP</td><td>9595</td><td class='open'>Open</td><td>UDP response received</td><td>2026-06-28 10:30:00</td></tr>
+<tr><td>pc-client-01.example.local</td><td>Client</td><td>UDP</td><td>38293</td><td class='warning'>No response</td><td>No UDP response received. The port may be open, filtered, or not responding.</td><td>2026-06-28 10:30:00</td></tr>
+</tbody>
+</table>
+<footer>Rapport d'exemple généré pour GitHub - Script créé par BERTRAND Bastien</footer>
+</body>
+</html>

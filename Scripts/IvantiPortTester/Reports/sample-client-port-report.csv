@@ -1,0 +1,19 @@
+﻿Target;Profile;Protocol;Port;Status;Detail;TestedAt
+pc-client-01.example.local;Client;TCP;80;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;443;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;445;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;4343;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;44345;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;5007;Closed or filtered;Connection timed out;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;9594;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;9595;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;9982;Closed or filtered;Connection failed or timed out;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;12175;Open;TCP connection established;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;12176;Closed or filtered;Connection timed out;2026-06-28 10:30:00
+pc-client-01.example.local;Client;TCP;33354;Closed or filtered;Connection failed or timed out;2026-06-28 10:30:00
+pc-client-01.example.local;Client;UDP;69;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
+pc-client-01.example.local;Client;UDP;1759;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
+pc-client-01.example.local;Client;UDP;4011;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
+pc-client-01.example.local;Client;UDP;9535;Open;UDP response received;2026-06-28 10:30:00
+pc-client-01.example.local;Client;UDP;9595;Open;UDP response received;2026-06-28 10:30:00
+pc-client-01.example.local;Client;UDP;38293;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00

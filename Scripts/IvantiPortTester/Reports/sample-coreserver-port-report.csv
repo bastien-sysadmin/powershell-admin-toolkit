@@ -1,0 +1,22 @@
+﻿Target;Profile;Protocol;Port;Status;Detail;TestedAt
+srv-core-01.example.local;CoreServer;TCP;25;Closed or filtered;Connection failed or timed out;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;443;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;445;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;4343;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;44343;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;44344;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;44346;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;9535;Closed or filtered;Connection timed out;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;9593;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;9594;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;9595;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;9971;Closed or filtered;Connection failed or timed out;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;9972;Closed or filtered;Connection failed or timed out;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;12174;Open;TCP connection established;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;TCP;33354;Closed or filtered;Connection failed or timed out;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;UDP;1758;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;UDP;9535;Open;UDP response received;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;UDP;9595;Open;UDP response received;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;UDP;33354;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;UDP;33355;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
+srv-core-01.example.local;CoreServer;UDP;38293;No response;No UDP response received. The port may be open, filtered, or not responding.;2026-06-28 10:30:00
