@@ -1,0 +1,250 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        tr:hover { background-color: #e8e8e8; cursor: pointer; transition: background-color 0.3s ease; }
+        .doublon { color: red; font-weight: bold; background-color: #ffcccc; }
+        .success { color: green; font-weight: bold; background-color: #d4edda; }
+        .failure { color: red; font-weight: bold; background-color: #f8d7da; }
+        input[type="text"] { padding: 8px; margin: 20px 0; width: 100%; max-width: 300px; display: block; border: 1px solid #ccc; border-radius: 4px; }
+        select { padding: 8px; margin: 20px 0; border: 1px solid #ccc; border-radius: 4px; }
+        h1 { font-size: 2em; text-align: center; color: #333; margin-top: 20px; }
+        footer { text-align: center; font-size: 12px; color: #777; margin-top: 30px; }
+        .summary { 
+            font-size: 14px; 
+            font-weight: bold; 
+            color: #333; 
+            margin: 20px 0; 
+            padding: 15px; 
+            background-color: #e9f7ec; 
+            border: 1px solid #c8e6c9; 
+            border-radius: 8px; 
+            display: flex; 
+            justify-content: space-between; 
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .summary span { 
+            padding-left: 10px; 
+        }
+    </style>
+</head>
+<body>
+   <h1>Rapport des Tests de Chemins et Doublons</h1>
+   
+   <!-- Zone de recherche (en haut) -->
+   <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Rechercher...">
+   
+   <!-- Menu avec les filtres -->
+   <label for="filterSelect">Filtrer par :</label>
+   <select id="filterSelect" onchange="filterTable()">
+       <option value="all">Tout afficher</option>
+       <option value="doublon">Doublons</option>
+       <option value="success">Succès</option>
+       <option value="failure">Échec</option>
+       <option value="no-doublon">Sans doublon</option>
+       <option value="failure-or-doublon">Échec ou Doublon</option>
+       <option value="http">Chemins HTTP</option>
+       <option value="https">Chemins HTTPS</option>
+       <option value="unc">Chemins UNC</option>
+   </select>
+   
+   <!-- Zone de résumé (en dessous du filtre) -->
+   <div class="summary">
+       <div>Nombre d'échecs : <span id="nombreEchecs">0</span></div>
+       <div>Nombre de doublons : <span id="nombreDoublons">0</span></div>
+   </div>
+
+   <!-- Tableau des résultats -->
+   <table>
+       <thead>
+           <tr><th>Nom Paquet</th><th>Chemin</th><th>Résultat Test</th><th>Doublon</th><th>Type de Chemin</th></tr>
+       </thead>
+       <tbody id="tableBody"><tr class='no-filter'>
+                        <td>Enable Windows Update Service</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Software\Scripts\Start-WindowsUpdateService.bat</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>7-Zip</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Software\7-Zip\7z-example-x64.msi</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Endpoint Agent Update - Cleanup</td>
+                        <td>\\SRV-DEPLOY-01\OSD\Agent\Endpoint Agent Update\EBA-Launch-Install.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Endpoint Agent Update</td>
+                        <td>\\SRV-DEPLOY-01\OSD\Agent\Endpoint Agent Update\EBA-Launch-Install.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class='doublon'>Oui</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Deployment License Script</td>
+                        <td>http://deploy.example.local/packages/LicenseDeploy.ps1</td>
+                        <td class='success'>success</td>
+                        <td class=''>Non</td>
+                        <td>HTTP</td>
+                    </tr><tr class='no-filter'>
+                        <td>Remove Xbox App</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Scripts\Remove-XboxApp.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Clear Preferred Servers</td>
+                        <td>http://deploy.example.local/packages/ClearPreferredServers.bat</td>
+                        <td class='success'>success</td>
+                        <td class=''>Non</td>
+                        <td>HTTP</td>
+                    </tr><tr class='no-filter'>
+                        <td>Import Remote Control Certificate</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Certificates\Import-RemoteControlCertificate.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Enroll macOS Device in MDM</td>
+                        <td>http://deploy.example.local/packages/mdm_enroll_macos.sh</td>
+                        <td class='success'>success</td>
+                        <td class=''>Non</td>
+                        <td>HTTP</td>
+                    </tr><tr class='no-filter'>
+                        <td>Install Microsoft 365 Apps</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Software\Microsoft365\setup.exe</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Inventory Discovery Remote Agent</td>
+                        <td>http://SRV-DEPLOY-01.example.local/packages/Inventory Discovery Remote Agent.msi</td>
+                        <td class='success'>success</td>
+                        <td class=''>Non</td>
+                        <td>HTTP</td>
+                    </tr><tr class='no-filter'>
+                        <td>Inventory Discovery Remote Agent Uninstall</td>
+                        <td>http://SRV-DEPLOY-01.example.local/packages/Inventory Discovery Remote Agent.msi</td>
+                        <td class='success'>success</td>
+                        <td class='doublon'>Oui</td>
+                        <td>HTTP</td>
+                    </tr><tr class='no-filter'>
+                        <td>Endpoint Agent Migration 2024</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Agent\Migration2024\Launch-Install.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Notepad++</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Software\Notepad++\npp-example-x64.exe</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>PuTTY</td>
+                        <td>\\SRV-DEPLOY-01\OSD\software\PuTTY\putty-64bit-0.80-installer.msi</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Microsoft 365 Desktop Shortcut</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Scripts\Create-Microsoft365Shortcut.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Web Connectivity Test</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Scripts\Test-WebConnectivity.ps1</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr><tr class='no-filter'>
+                        <td>Delete Streamed Documents</td>
+                        <td>http://deploy.example.local/packages/DeleteStreamedDocuments.bat</td>
+                        <td class='success'>success</td>
+                        <td class=''>Non</td>
+                        <td>HTTP</td>
+                    </tr><tr class='no-filter'>
+                        <td>WinSCP</td>
+                        <td>\\SRV-DEPLOY-01\Deployment\Software\WinSCP\WinSCP-example-x64.msi</td>
+                        <td class='failure'>failure</td>
+                        <td class=''>Non</td>
+                        <td>UNC</td>
+                    </tr>   </tbody>
+   </table>
+
+   <script>
+       // Mettre à jour le nombre d'échecs et de doublons dans le résumé
+       document.getElementById('nombreEchecs').textContent = '13';
+       document.getElementById('nombreDoublons').textContent = '2';
+
+       function searchTable() {
+           var input = document.getElementById('searchInput');
+           var filter = input.value.toUpperCase();
+           var table = document.getElementById('tableBody');
+           var tr = table.getElementsByTagName('tr');
+           for (var i = 0; i < tr.length; i++) {
+               var td1 = tr[i].getElementsByTagName('td')[0];
+               var td2 = tr[i].getElementsByTagName('td')[1];
+               if (td1 && td2) {
+                   var txtValue1 = td1.textContent || td1.innerText;
+                   var txtValue2 = td2.textContent || td2.innerText;
+                   if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                       tr[i].style.display = '';
+                   } else {
+                       tr[i].style.display = 'none';
+                   }
+               }
+           }
+       }
+
+       function filterTable() {
+           var select = document.getElementById('filterSelect');
+           var filter = select.value;
+           var rows = document.querySelectorAll('#tableBody tr');
+           rows.forEach(function(row) {
+               var showRow = false;
+
+               if (filter === 'all') {
+                   showRow = true;
+               } else if (filter === 'doublon' && row.querySelector('td:nth-child(4)').textContent.trim() === 'Oui') {
+                   showRow = true;
+               } else if (filter === 'success' && row.querySelector('td:nth-child(3)').textContent.trim() === 'success') {
+                   showRow = true;
+               } else if (filter === 'failure' && row.querySelector('td:nth-child(3)').textContent.trim() === 'failure') {
+                   showRow = true;
+               } else if (filter === 'no-doublon' && row.querySelector('td:nth-child(4)').textContent.trim() === 'Non') {
+                   showRow = true;
+               } else if (filter === 'failure-or-doublon' && (row.querySelector('td:nth-child(3)').textContent.trim() === 'failure' || row.querySelector('td:nth-child(4)').textContent.trim() === 'Oui')) {
+                   showRow = true;
+               } else if (filter === 'http' && row.querySelector('td:nth-child(5)').textContent.trim() === 'HTTP') {
+                   showRow = true;
+               } else if (filter === 'https' && row.querySelector('td:nth-child(5)').textContent.trim() === 'HTTPS') {
+                   showRow = true;
+               } else if (filter === 'unc' && row.querySelector('td:nth-child(5)').textContent.trim() === 'UNC') {
+                   showRow = true;
+               }
+
+               row.style.display = showRow ? '' : 'none'; 
+           });
+       }
+   </script>
+
+   <footer>
+       Généré le 09/01/2025<br>
+       Données anonymisées - Script créé par Bastien Bertrand
+   </footer>
+</body>
+</html>

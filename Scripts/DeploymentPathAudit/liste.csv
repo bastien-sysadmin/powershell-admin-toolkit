@@ -1,0 +1,20 @@
+﻿Nom,Chemin
+Enable Windows Update Service,\\SRV-DEPLOY-01\Deployment\Software\Scripts\Start-WindowsUpdateService.bat
+7-Zip,\\SRV-DEPLOY-01\Deployment\Software\7-Zip\7z-example-x64.msi
+Endpoint Agent Update - Cleanup,\\SRV-DEPLOY-01\Deployment\Agent\AgentUpdate\Launch-Install.ps1
+Endpoint Agent Update,\\SRV-DEPLOY-01\Deployment\Agent\AgentUpdate\Launch-Install.ps1
+Deployment License Script,http://deploy.example.local/packages/LicenseDeploy.ps1
+Remove Xbox App,\\SRV-DEPLOY-01\Deployment\Scripts\Remove-XboxApp.ps1
+Clear Preferred Servers,http://deploy.example.local/packages/ClearPreferredServers.bat
+Import Remote Control Certificate,\\SRV-DEPLOY-01\Deployment\Certificates\Import-RemoteControlCertificate.ps1
+Enroll macOS Device in MDM,http://deploy.example.local/packages/mdm_enroll_macos.sh
+Install Microsoft 365 Apps,\\SRV-DEPLOY-01\Deployment\Software\Microsoft365\setup.exe
+Inventory Discovery Remote Agent,http://deploy.example.local/packages/InventoryDiscoveryRemoteAgent.msi
+Inventory Discovery Remote Agent Uninstall,http://deploy.example.local/packages/InventoryDiscoveryRemoteAgent.msi
+Endpoint Agent Migration 2024,\\SRV-DEPLOY-01\Deployment\Agent\Migration2024\Launch-Install.ps1
+Notepad++,\\SRV-DEPLOY-01\Deployment\Software\Notepad++\npp-example-x64.exe
+PuTTY,\\SRV-DEPLOY-01\Deployment\Software\PuTTY\putty-example-x64.msi
+Microsoft 365 Desktop Shortcut,\\SRV-DEPLOY-01\Deployment\Scripts\Create-Microsoft365Shortcut.ps1
+Web Connectivity Test,\\SRV-DEPLOY-01\Deployment\Scripts\Test-WebConnectivity.ps1
+Delete Streamed Documents,http://deploy.example.local/packages/DeleteStreamedDocuments.bat
+WinSCP,\\SRV-DEPLOY-01\Deployment\Software\WinSCP\WinSCP-example-x64.msi
