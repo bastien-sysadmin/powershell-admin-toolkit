@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExportableContainer LastSavedBy="EXAMPLE\\admin.user" Revision="0" SourceCore="SRV-DEPLOY-01.example.local" Guid="EXAMPLE-CONTAINER-001" SaveType="Inherit">
+  <DuplicateReferences />
+  <SyncEnabled>No</SyncEnabled>
+  <RemoteConsole>SRV-DEPLOY-01</RemoteConsole>
+  <LastSavedDate>2026-01-01T10:00:00+01:00</LastSavedDate>
+  <Name>Sample deployment packages</Name>
+  <Items>
+    <Exportable Revision="0" SourceCore="SRV-DEPLOY-01.example.local" Guid="EXAMPLE-PACKAGE-001" SaveType="Inherit">
+      <Name>7-Zip - Example Package</Name>
+      <Description>Example package used for a public GitHub sample.</Description>
+      <PrimaryFile>\\SRV-FILES-01\Packages$\7-Zip\install-7zip.ps1</PrimaryFile>
+    </Exportable>
+    <Exportable Revision="0" SourceCore="SRV-DEPLOY-01.example.local" Guid="EXAMPLE-PACKAGE-002" SaveType="Inherit">
+      <Name>Notepad++ - Example Package</Name>
+      <Description>Example package used for a public GitHub sample.</Description>
+      <PrimaryFile>\\SRV-FILES-01\Packages$\NotepadPlusPlus\npp-installer.exe</PrimaryFile>
+    </Exportable>
+    <Exportable Revision="0" SourceCore="SRV-DEPLOY-01.example.local" Guid="EXAMPLE-PACKAGE-003" SaveType="Inherit">
+      <Name>Office Deployment - Example Package</Name>
+      <Description>Example package used for a public GitHub sample.</Description>
+      <PrimaryFile>\\SRV-FILES-01\Packages$\OfficeDeployment\setup.exe</PrimaryFile>
+    </Exportable>
+    <Exportable Revision="0" SourceCore="SRV-DEPLOY-01.example.local" Guid="EXAMPLE-PACKAGE-004" SaveType="Inherit">
+      <Name>Already HTTPS - Example Package</Name>
+      <Description>This entry is already using HTTPS and should not be modified.</Description>
+      <PrimaryFile>https://deploy.example.local/packages/ExampleApp/install.ps1</PrimaryFile>
+    </Exportable>
+  </Items>
+</ExportableContainer>

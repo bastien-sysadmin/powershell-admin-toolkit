@@ -1,0 +1,18 @@
+======================== Log de conversion des chemins ========================
+Date et heure de la conversion : 2026-01-01 10:00:00
+Fichier source : sample-package-export.ldms
+Fichier sortie : sample-converted-package-export.ldms
+=============================================================================
+
+[2026-01-01 10:00:00] Conversion 1
+Ancien chemin : \\SRV-FILES-01\Packages$\7-Zip\install-7zip.ps1
+Nouveau chemin : https://SRV-FILES-01/Packages$/7-Zip/install-7zip.ps1
+-------------------------------------------------------------
+[2026-01-01 10:00:00] Conversion 2
+Ancien chemin : \\SRV-FILES-01\Packages$\NotepadPlusPlus\npp-installer.exe
+Nouveau chemin : https://SRV-FILES-01/Packages$/NotepadPlusPlus/npp-installer.exe
+-------------------------------------------------------------
+[2026-01-01 10:00:00] Conversion 3
+Ancien chemin : \\SRV-FILES-01\Packages$\OfficeDeployment\setup.exe
+Nouveau chemin : https://SRV-FILES-01/Packages$/OfficeDeployment/setup.exe
+-------------------------------------------------------------
