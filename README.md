@@ -154,34 +154,9 @@ Ces fichiers sont volontairement anonymisés et ne correspondent à aucun enviro
 
 Ils sont fournis uniquement pour montrer :
 
-- le format attendu en entrée ;
-- le type de résultat généré ;
-- la structure des rapports produits par les scripts.
-
-## Sécurité et confidentialité
-
-Aucune information confidentielle ne doit être publiée dans ce dépôt.
-
-Avant toute publication, les éléments suivants doivent être supprimés ou remplacés par des valeurs fictives :
-
-- noms de serveurs réels ;
-- domaines internes ;
-- adresses IP internes ;
-- chemins réseau réels ;
-- noms d'entreprise ou de client ;
-- mots de passe ;
-- tokens ;
-- clés API ;
-- données issues d'un environnement professionnel réel.
-
-Les fichiers d'exemple présents dans ce dépôt utilisent des valeurs fictives comme :
-
-```text
-srv-core-01.example.local
-pc-client-01.example.local
-\\SRV-FILES-01\Deploy\Software
-https://deploy.example.local/packages
-```
+- le format attendu en entrée
+- le type de résultat généré
+- la structure des rapports produits par les scripts
 
 ## Notes
 
