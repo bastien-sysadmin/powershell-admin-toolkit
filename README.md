@@ -10,11 +10,11 @@ Ce dépôt me permet de centraliser différents scripts PowerShell utiles pour l
 
 Les scripts publiés ici sont pensés pour être :
 
-- lisibles ;
-- documentés ;
-- facilement adaptables ;
-- réutilisables dans différents environnements Windows ;
-- accompagnés d'exemples anonymisés lorsque nécessaire.
+- lisibles
+- documentés
+- facilement adaptables
+- réutilisables dans différents environnements Windows
+- accompagnés d'exemples anonymisés lorsque nécessaire
 
 ## Scripts disponibles
 
