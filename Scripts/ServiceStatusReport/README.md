@@ -77,16 +77,6 @@ Exécution avec ouverture automatique du rapport :
 
 Les données fournies sont des exemples et ne contiennent aucune donnée liée à un environnement réel d'entreprise.
 
-## Sécurité
-
-Avant toute publication publique, il est recommandé de vérifier que les fichiers CSV ne contiennent pas :
-
-- noms de serveurs internes ;
-- domaines Active Directory ;
-- chemins réseau ;
-- comptes utilisateurs ;
-- informations propres à une entreprise ou un client.
-
 ## Auteur
 
 BERTRAND Bastien
