@@ -20,6 +20,8 @@ Ce script peut être utilisé dans un contexte d'administration système ou de m
 ConvertUNCToHTTPS/
 ├── Convert-UNCToHTTPS.ps1
 ├── sample-package-export.ldms
+├── sample-converted-package-export.ldms
+├── sample-change-log.txt
 └── README.md
 ```
 
@@ -55,17 +57,6 @@ https://SRV-FILES-01/Packages$/7-Zip/install-7zip.ps1
 
 Le fichier `sample-package-export.ldms` contient uniquement des données fictives et anonymisées.
 Il ne correspond à aucun environnement réel d'entreprise.
-
-## Sécurité
-
-Avant toute publication publique, vérifier qu'aucun fichier ne contient :
-
-- nom de serveur réel ;
-- domaine interne ;
-- compte utilisateur ;
-- chemin réseau réel ;
-- URL interne ;
-- information liée à un client ou à un ancien employeur.
 
 ## Auteur
 
