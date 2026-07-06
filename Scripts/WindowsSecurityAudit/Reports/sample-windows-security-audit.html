@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Audit de sécurité Windows - PC-EXAMPLE-01</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #1f2937;
+            margin: 30px;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        h1 {
+            margin-top: 0;
+            color: #111827;
+        }
+        .meta {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+        }
+        .summary {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: #f9fafb;
+            min-width: 110px;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        th {
+            background-color: #111827;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        tr:hover {
+            background-color: #f9fafb;
+        }
+        .ok {
+            color: #15803d;
+            font-weight: bold;
+        }
+        .warning {
+            color: #a16207;
+            font-weight: bold;
+        }
+        .error {
+            color: #b91c1c;
+            font-weight: bold;
+        }
+        .info {
+            color: #0369a1;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 25px;
+            color: #6b7280;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Audit de sécurité Windows</h1>
+
+    <div class="meta">
+        <div><strong>Machine :</strong> PC-EXAMPLE-01</div>
+        <div><strong>Utilisateur :</strong> PC-EXAMPLE-01\LocalAdmin</div>
+        <div><strong>Date :</strong> 2026-01-15 10:30:00</div>
+        <div><strong>Mode administrateur :</strong> True</div>
+    </div>
+
+    <div class="summary">
+        <div class="card ok">OK : 8</div>
+        <div class="card warning">WARNING : 6</div>
+        <div class="card error">ERROR : 0</div>
+        <div class="card info">INFO : 2</div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Contrôle</th>
+                <th>Statut</th>
+                <th>Détail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Droits administrateur</td><td class='ok'>OK</td><td>Le script est lancé avec des droits administrateur.</td></tr>
+<tr><td>Pare-feu Windows</td><td class='ok'>OK</td><td>Tous les profils du pare-feu Windows sont activés.</td></tr>
+<tr><td>Windows Defender</td><td class='warning'>WARNING</td><td>Antivirus désactivé ; Protection temps reel désactivée ; Protection antispyware désactivée</td></tr>
+<tr><td>UAC</td><td class='ok'>OK</td><td>Le contrôle de compte utilisateur est active.</td></tr>
+<tr><td>BitLocker</td><td class='warning'>WARNING</td><td>BitLocker n'est pas active sur C:. Statut : Off.</td></tr>
+<tr><td>SMBv1</td><td class='ok'>OK</td><td>SMBv1 est désactivé.</td></tr>
+<tr><td>Bureau a distance</td><td class='ok'>OK</td><td>Le Bureau a distance est désactivé.</td></tr>
+<tr><td>RDP - NLA</td><td class='ok'>OK</td><td>L'authentification au niveau du réseau est activee.</td></tr>
+<tr><td>Administrateurs locaux</td><td class='info'>INFO</td><td>Membres du groupe Administrateurs : PC-EXAMPLE-01\Administrateur ; PC-EXAMPLE-01\LocalAdmin</td></tr>
+<tr><td>Mises à jour Windows</td><td class='warning'>WARNING</td><td>Dernier correctif installe : KB5000001 le 2026-01-10. Verifier si le poste est a jour.</td></tr>
+<tr><td>Derniers correctifs</td><td class='info'>INFO</td><td>KB5000001 (2026-01-10) ; KB5000002 (2026-01-08) ; KB5000003 (2026-01-08) ; KB5000004 (2026-01-01) ; KB5000005 (2026-01-01)</td></tr>
+<tr><td>Redémarrage en attente</td><td class='warning'>WARNING</td><td>Un redemarrage est nécessaire. Raison(s) : PendingFileRenameOperations.</td></tr>
+<tr><td>Compte invité local</td><td class='ok'>OK</td><td>Le compte invité local 'Invité' est désactivé.</td></tr>
+<tr><td>Secure Boot</td><td class='warning'>WARNING</td><td>Secure Boot est désactivé.</td></tr>
+<tr><td>WinRM</td><td class='ok'>OK</td><td>Le service WinRM n'est pas démarré.</td></tr>
+<tr><td>Execution Policy PowerShell</td><td class='warning'>WARNING</td><td>Politique d'exécution permissive : Unrestricted.</td></tr>
+        </tbody>
+    </table>
+
+    <footer>
+        Rapport généré par Invoke-WindowsSecurityAudit.ps1
+    </footer>
+</div>
+</body>
+</html>
