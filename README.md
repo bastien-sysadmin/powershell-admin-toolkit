@@ -27,6 +27,7 @@ Les scripts publiés ici sont pensés pour être :
 | `Scripts/ConvertUNCToHTTPS/Convert-UNCToHTTPS.ps1` | Convertit des chemins UNC en chemins HTTPS dans un fichier texte ou un export de packages, avec génération d'un fichier de sortie et d'un log. |
 | `Scripts/ServiceStatusReport/Get-ServiceStatusReport.ps1` | Vérifie l'état de services Windows à partir d'un fichier CSV et génère un rapport HTML avec résumé global. |
 | `Scripts/IvantiPortTester/Test-IvantiPorts.ps1` | Teste les ports TCP/UDP utilisés dans un environnement Ivanti / LANDesk et génère des rapports CSV/HTML. |
+| `Scripts/WindowsSecurityAudit/Invoke-WindowsSecurityAudit.ps1` | Réalise un audit de sécurité Windows de base et génère des rapports HTML/CSV. |
 
 ## Structure du dépôt
 
@@ -58,15 +59,22 @@ powershell-admin-toolkit/
     │   ├── Get-ServiceStatusReport.ps1
     │   └── sample-services.csv
     │
-    └── IvantiPortTester/
+    ├── IvantiPortTester/
+    │   ├── README.md
+    │   ├── Test-IvantiPorts.ps1
+    │   └── Reports/
+    │       ├── README.md
+    │       ├── sample-client-port-report.csv
+    │       ├── sample-client-port-report.html
+    │       ├── sample-coreserver-port-report.csv
+    │       └── sample-coreserver-port-report.html
+    │
+    └── WindowsSecurityAudit/
         ├── README.md
-        ├── Test-IvantiPorts.ps1
+        ├── Invoke-WindowsSecurityAudit.ps1
         └── Reports/
-            ├── README.md
-            ├── sample-client-port-report.csv
-            ├── sample-client-port-report.html
-            ├── sample-coreserver-port-report.csv
-            └── sample-coreserver-port-report.html
+            ├── sample-windows-security-audit.csv
+            └── sample-windows-security-audit.html
 ```
 
 ## Compétences mises en avant
