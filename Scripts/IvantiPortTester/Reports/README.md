@@ -1,6 +1,6 @@
 # Reports
 
-Ce dossier contient des exemples de rapports générés par le script `IvantiPortTester.ps1`.
+Ce dossier contient des exemples de rapports générés par le script `Test-IvantiPorts.ps1`.
 
 Les fichiers présents ici sont fictifs et anonymisés. Ils servent uniquement à illustrer le rendu CSV et HTML produit par le script.
 
